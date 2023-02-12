@@ -6,16 +6,21 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
+        <module name="fruitManager1.0" />
         <module name="servlet" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
-      <module name="servlet" target="1.5" />
+      <module name="fruitManager1.0" target="11" />
+      <module name="jdbcLearn" target="11" />
+      <module name="servlet" target="8" />
     </bytecodeTargetLevel>
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_STRING" value="-encoding utf-8" />
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="fruitManager1.0" options="" />
+      <module name="jdbcLearn" options="" />
       <module name="servlet" options="" />
     </option>
   </component>
