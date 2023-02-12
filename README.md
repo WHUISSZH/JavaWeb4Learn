@@ -1,5 +1,6 @@
 # JavaWeb4Learn
-尚硅谷22年Java Web项目学习记录，视频链接：https://www.bilibili.com/video/BV1AS4y177xJ?p=18&vd_source=d1c25b995c7a4d3fad25149c20815d5c。\
+尚硅谷22年Java Web项目学习记录，视频链接：https://www.bilibili.com/video/BV1AS4y177xJ?p=18&vd_source=d1c25b995c7a4d3fad25149c20815d5c。
+
 视频内容组成：
 1. 1-17是前端内容，之后是后端内容，后端分层次。
 1. 19-22是对idea上部署JavaWeb的详细讲解，对配置头疼的话，看这里。
