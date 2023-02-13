@@ -1,0 +1,14 @@
+JDBC项目实战 - 水果库存系统改进
+
+增删改的一般步骤：
+1. 建立数据库连接
+2. 编写sql            不同操作的sql语句不同
+3. 获取预备状态对象
+4. 填充预备状态对象参数   需要填充的参数不同
+5. 执行sql
+6. 释放资源
+
+操作不同的表需要实现不同的实现类中，我们还可以把操作不同表的公共流程进一步提取，单独作为一个抽象类（baseDAO.java），实现代码复用。
+复用相同部分，定制化输入不同部分，增 删 改抽象为executeUpdate(String sql, Object... params)方法，
+根据查询结果范围的不同又分为 List<T> executeQuery(String sql, Object... params)、T querySingleObj(String sql, Object... params)、
+Object[] executeComplexQuery(String sql, Object... params)方法

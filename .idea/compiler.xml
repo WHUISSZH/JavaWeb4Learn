@@ -8,12 +8,14 @@
         <outputRelativeToContentRoot value="true" />
         <module name="fruitManager1.0" />
         <module name="fruitManager2.0" />
+        <module name="fruitManager3.0" />
         <module name="servlet" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
       <module name="fruitManager1.0" target="11" />
       <module name="fruitManager2.0" target="11" />
+      <module name="fruitManager3.0" target="11" />
       <module name="jdbcLearn" target="11" />
       <module name="servlet" target="8" />
     </bytecodeTargetLevel>
@@ -23,6 +25,7 @@
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
       <module name="fruitManager1.0" options="" />
       <module name="fruitManager2.0" options="" />
+      <module name="fruitManager3.0" options="" />
       <module name="jdbcLearn" options="" />
       <module name="servlet" options="" />
     </option>
