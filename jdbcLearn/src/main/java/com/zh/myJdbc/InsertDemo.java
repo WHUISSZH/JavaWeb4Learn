@@ -31,6 +31,9 @@ public class InsertDemo {
 //        fid, fname, price, fcount, remark; fid自增，代码里默认设置为0，插到数据库里会自动更新
         String insertSQL = "insert into t_fruit values(0,?,?,?,?)";
 //        4. 创建预处理命令对象
+//            Statement - 存在注入式漏洞,一般情况下，不使用
+//                PreparedStatement - 预处理命令对象
+//                    CallableStatement - 执行存储过程的
         PreparedStatement preparedStatement = connection.prepareStatement(insertSQL);
 //        5. 填充参数，索引从1开始
         preparedStatement.setString(1,"雪莲果");
