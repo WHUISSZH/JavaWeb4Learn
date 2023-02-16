@@ -3,4 +3,59 @@
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_4_0.xsd"
          version="4.0">
+    <servlet>
+        <servlet-name>myAddServlet</servlet-name>
+        <servlet-class>com.zh.myServlet.addServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>myAddServlet</servlet-name>
+        <url-pattern>/add</url-pattern>
+        <!--注意： <url-pattern>/add</url-pattern>中内容以斜杠开头-->
+    </servlet-mapping>
+
+    <!--
+        1. 用户发请求，action=add
+        2. 项目中，web.xml中找到url-pattern = /add   第12行
+        3. 找第11行的servlet-name = myAddServlet
+        4. 找和servlet-mapping中servlet-name一致的servlet  第7行
+        5. 找第8行的servlet-class -> com.zh.myServlet.addServlet
+        6. 用户发送的是post请求（method=post） ， 因此 tomcat会执行addServlet类中的doPost方法
+        -->
+
+    <servlet>
+        <servlet-name>servletLifeCycleDemo</servlet-name>
+        <servlet-class>com.zh.myServlet.LifeCycleDemo</servlet-class>
+        <load-on-startup>0</load-on-startup>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>servletLifeCycleDemo</servlet-name>
+        <url-pattern>/lifeCycle</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>sessionServletDemo</servlet-name>
+        <servlet-class>com.zh.myServlet.SessionServletDemo</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>sessionServletDemo</servlet-name>
+        <url-pattern>/session</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>sessionServletDemo2</servlet-name>
+        <servlet-class>com.zh.myServlet.SessionServletDemo2</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>sessionServletDemo2</servlet-name>
+        <url-pattern>/session2</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>dispatcherServlet</servlet-name>
+        <servlet-class>com.zh.myServlet.ServerDispatcherClientRedirect</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>dispatcherServlet</servlet-name>
+        <url-pattern>/dispatcher</url-pattern>
+    </servlet-mapping>
 </web-app>
