@@ -9,6 +9,7 @@
     </root>
     <schema id="2" parent="1" name="fruitdb">
       <Current>1</Current>
+      <Visible>1</Visible>
       <Collation>utf8_general_ci</Collation>
     </schema>
     <schema id="3" parent="1" name="information_schema">
@@ -1112,5 +1113,39 @@
       <Charset>utf8mb4</Charset>
       <DefaultForCharset>0</DefaultForCharset>
     </collation>
+    <table id="280" parent="2" name="t_fruit"/>
+    <column id="281" parent="280" name="fid">
+      <Position>1</Position>
+      <DataType>int(11)|0s</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="282" parent="280" name="fname">
+      <Position>2</Position>
+      <DataType>varchar(20)|0s</DataType>
+      <NotNull>1</NotNull>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="283" parent="280" name="price">
+      <Position>3</Position>
+      <DataType>int(11)|0s</DataType>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="284" parent="280" name="count">
+      <Position>4</Position>
+      <DataType>int(11)|0s</DataType>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="285" parent="280" name="remark">
+      <Position>5</Position>
+      <DataType>varchar(50)|0s</DataType>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <key id="286" parent="280" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>fid</ColNames>
+      <Primary>1</Primary>
+    </key>
   </database-model>
 </dataSource>

@@ -2,6 +2,7 @@ package com.zh.myJdbc.dbConnectionPool;
 
 import com.alibaba.druid.pool.DruidDataSource;
 import com.alibaba.druid.pool.DruidDataSourceFactory;
+import com.alibaba.druid.util.JdbcUtils;
 
 import javax.sql.DataSource;
 import java.io.IOException;
@@ -53,7 +54,7 @@ public class DruidDemo {
         Properties properties = new Properties();
 
         // 有bug，resourceAsStream一直为null
-        InputStream resourceAsStream = DruidDemo.class.getResourceAsStream("jdbc.properties");
+        InputStream resourceAsStream = JdbcUtils.class.getClassLoader().getResourceAsStream("jdbc.properties");
         properties.load(resourceAsStream);
 
         DruidDataSource druidDataSource = new DruidDataSource();

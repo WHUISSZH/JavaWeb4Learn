@@ -10,6 +10,8 @@
         <module name="fruitManager2.0" />
         <module name="fruitManager3.0" />
         <module name="servlet" />
+        <module name="thymeleafLearn" />
+        <module name="thymeleafLearn2.0" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
@@ -17,7 +19,9 @@
       <module name="fruitManager2.0" target="11" />
       <module name="fruitManager3.0" target="11" />
       <module name="jdbcLearn" target="11" />
-      <module name="servlet" target="8" />
+      <module name="servlet" target="11" />
+      <module name="thymeleafLearn" target="11" />
+      <module name="thymeleafLearn2.0" target="11" />
     </bytecodeTargetLevel>
   </component>
   <component name="JavacSettings">
@@ -28,6 +32,8 @@
       <module name="fruitManager3.0" options="" />
       <module name="jdbcLearn" options="" />
       <module name="servlet" options="" />
+      <module name="thymeleafLearn" options="" />
+      <module name="thymeleafLearn2.0" options="" />
     </option>
   </component>
 </project>
