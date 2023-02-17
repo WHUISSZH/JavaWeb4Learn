@@ -17,17 +17,17 @@ public class BatchProcessDemo {
         Class.forName("com.mysql.cj.jdbc.Driver");
         //批处理操作一： 如果要执行批处理任务，URL中需要添加一个参数：rewriteBatchedStatements=true
         Connection connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/fruitdb?serverTimezone=Asia/Shanghai&useSSL=false&rewriteBatchedStatements=true", "root", "zhanghui");
-//        String sql = "insert into t_fruit values(0, ?, ?, ?, ?)";
-        String sql = "delete from t_fruit where fid = ?";
+        String sql = "insert into t_fruit values(0, ?, ?, ?, ?)";
+//        String sql = "delete from t_fruit where fid = ?";
         PreparedStatement preparedStatement = connection.prepareStatement(sql);
 
         for (int i = 1; i <= 55; i++) {
-//            preparedStatement.setString(1, "草莓" + i);
-//            preparedStatement.setInt(2, i * 10);
-//            preparedStatement.setInt(3, i * 30);
-//            preparedStatement.setString(4, "过敏");
+            preparedStatement.setString(1, "草莓" + i);
+            preparedStatement.setInt(2, i * 10);
+            preparedStatement.setInt(3, i * 30);
+            preparedStatement.setString(4, "过敏");
 
-            preparedStatement.setInt(1, i + 38);
+//            preparedStatement.setInt(1, i + 38);
 
             //批处理操作二：把待处理状态对象添加到batch队列中
             preparedStatement.addBatch();

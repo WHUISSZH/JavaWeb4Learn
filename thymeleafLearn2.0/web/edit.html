@@ -1,0 +1,42 @@
+<html xmlns:th="http://www.thymeleaf.org" xmlns="http://www.w3.org/1999/html">
+<head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="css/edit.css">
+</head>
+<body>
+<div id="div_container">
+    <div id="div_fruit_list">
+        <p class="center f30">编辑库存信息</p>
+        <!--action对应的是 url地址中/ 后面的部分-->
+        <form th:action="@{/update.do}" method="post" th:object="${session.fruit}">
+            <input type="hidden" name="fid" th:value="*{fid}">
+            <table id="tbl_fruit">
+                <tr>
+                    <th class="w20">名称</th>
+                    <!--1. 获取servlet中session域中的值，2种方式，第二种不用写对象名，直接写属性即可-->
+                    <!--<td><input type="text" name="fname" th:value="${fruit.fname}"/></td>-->
+                    <td><input type="text" name="fname" th:value="*{fname}"/></td>
+                </tr>
+                <tr>
+                    <th class="w20">单价</th>
+                    <td><input type="text" name="price" th:value="*{price}"/></td>
+                </tr>
+                <tr>
+                    <th class="w20">库存</th>
+                    <td><input type="text" name="count" th:value="*{count}"></td>
+                </tr>
+                <tr>
+                    <th class="w20">备注</th>
+                    <td><input type="text" name="remark" th:value="*{remark}"></td>
+                </tr>
+                <tr>
+                    <th colspan="2">
+                        <input type="submit" value="修改">
+                    </th>
+                </tr>
+            </table>
+        </form>
+    </div>
+</div>
+</body>
+</html>
