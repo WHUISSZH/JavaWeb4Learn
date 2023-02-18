@@ -5,7 +5,6 @@ import com.zh.fruit.prjo.Fruit;
 import com.zh.mySSM.mySpringMVC.ViewBaseServlet;
 import com.zh.mySSM.util.StringUtil;
 
-import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;

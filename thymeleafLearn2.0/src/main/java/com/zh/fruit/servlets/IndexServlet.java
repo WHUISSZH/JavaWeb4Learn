@@ -25,7 +25,7 @@ import java.util.List;
 @WebServlet("/index")
 public class IndexServlet extends ViewBaseServlet {
     @Override
-    protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+    protected void doPost(HttpServletRequest request, HttpServletResponse response) throws IOException {
         request.setCharacterEncoding("UTF-8");
 
 //        设置分页数
@@ -69,7 +69,7 @@ public class IndexServlet extends ViewBaseServlet {
                 pageNo = Integer.parseInt(pageNoStr);
             }
 
-//            域中获取关键字，
+//            如果不是点击搜索按钮发送过来的请求，那么搜索是居于session域中保存的现有的关键字来进行查询，
             Object keywordObj = session.getAttribute("keyword");
             if (keywordObj != null) {
                 keyword = (String) keywordObj;
