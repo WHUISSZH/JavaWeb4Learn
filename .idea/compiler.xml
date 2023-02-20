@@ -11,6 +11,7 @@
         <module name="fruitManager3.0" />
         <module name="fruitManagerMVC" />
         <module name="fruitManagerMVC-controller" />
+        <module name="fruitManagerMVC-ioc" />
         <module name="fruitManagerMVC-reflect" />
         <module name="servlet" />
         <module name="thymeleafLearn" />
@@ -23,6 +24,7 @@
       <module name="fruitManager3.0" target="11" />
       <module name="fruitManagerMVC" target="11" />
       <module name="fruitManagerMVC-controller" target="11" />
+      <module name="fruitManagerMVC-ioc" target="11" />
       <module name="fruitManagerMVC-reflect" target="11" />
       <module name="jdbcLearn" target="11" />
       <module name="servlet" target="11" />
@@ -38,6 +40,7 @@
       <module name="fruitManager3.0" options="" />
       <module name="fruitManagerMVC" options="" />
       <module name="fruitManagerMVC-controller" options="" />
+      <module name="fruitManagerMVC-ioc" options="" />
       <module name="fruitManagerMVC-reflect" options="" />
       <module name="jdbcLearn" options="" />
       <module name="servlet" options="" />

@@ -1,0 +1,31 @@
+<component name="ArtifactManager">
+  <artifact type="exploded-war" name="fruitManagerMVC-ioc:war exploded">
+    <output-path>$PROJECT_DIR$/out/artifacts/fruitManagerMVC_ioc_war_exploded</output-path>
+    <root id="root">
+      <element id="directory" name="WEB-INF">
+        <element id="directory" name="classes">
+          <element id="module-output" name="fruitManagerMVC-ioc" />
+        </element>
+        <element id="directory" name="lib">
+          <element id="library" level="project" name="Maven: mysql:mysql-connector-java:8.0.11" />
+          <element id="library" level="project" name="Maven: com.google.protobuf:protobuf-java:2.6.0" />
+          <element id="library" level="project" name="Maven: org.thymeleaf:thymeleaf:3.0.12.RELEASE" />
+          <element id="library" level="project" name="Maven: ognl:ognl:3.1.26" />
+          <element id="library" level="project" name="Maven: org.javassist:javassist:3.20.0-GA" />
+          <element id="library" level="project" name="Maven: org.attoparser:attoparser:2.0.5.RELEASE" />
+          <element id="library" level="project" name="Maven: org.unbescape:unbescape:1.1.6.RELEASE" />
+          <element id="library" level="project" name="Maven: org.slf4j:slf4j-api:1.7.25" />
+          <element id="library" level="project" name="Maven: org.springframework:spring-webmvc:5.2.22.RELEASE" />
+          <element id="library" level="project" name="Maven: org.springframework:spring-aop:5.2.22.RELEASE" />
+          <element id="library" level="project" name="Maven: org.springframework:spring-beans:5.2.22.RELEASE" />
+          <element id="library" level="project" name="Maven: org.springframework:spring-context:5.2.22.RELEASE" />
+          <element id="library" level="project" name="Maven: org.springframework:spring-core:5.2.22.RELEASE" />
+          <element id="library" level="project" name="Maven: org.springframework:spring-jcl:5.2.22.RELEASE" />
+          <element id="library" level="project" name="Maven: org.springframework:spring-expression:5.2.22.RELEASE" />
+          <element id="library" level="project" name="Maven: org.springframework:spring-web:5.2.22.RELEASE" />
+        </element>
+      </element>
+      <element id="javaee-facet-resources" facet="fruitManagerMVC-ioc/web/Web" />
+    </root>
+  </artifact>
+</component>

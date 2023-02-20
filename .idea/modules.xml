@@ -8,6 +8,7 @@
       <module fileurl="file://$PROJECT_DIR$/fruitManager3.0/fruitManager3.0.iml" filepath="$PROJECT_DIR$/fruitManager3.0/fruitManager3.0.iml" />
       <module fileurl="file://$PROJECT_DIR$/fruitManagerMVC/fruitManagerMVC.iml" filepath="$PROJECT_DIR$/fruitManagerMVC/fruitManagerMVC.iml" />
       <module fileurl="file://$PROJECT_DIR$/fruitManagerMVC-controller/fruitManagerMVC-controller.iml" filepath="$PROJECT_DIR$/fruitManagerMVC-controller/fruitManagerMVC-controller.iml" />
+      <module fileurl="file://$PROJECT_DIR$/fruitManagerMVC-ioc/fruitManagerMVC-ioc.iml" filepath="$PROJECT_DIR$/fruitManagerMVC-ioc/fruitManagerMVC-ioc.iml" />
       <module fileurl="file://$PROJECT_DIR$/fruitManagerMVC-reflect/fruitManagerMVC-reflect.iml" filepath="$PROJECT_DIR$/fruitManagerMVC-reflect/fruitManagerMVC-reflect.iml" />
       <module fileurl="file://$PROJECT_DIR$/jdbcLearn/jdbcLearn.iml" filepath="$PROJECT_DIR$/jdbcLearn/jdbcLearn.iml" />
       <module fileurl="file://$PROJECT_DIR$/servlet/servlet.iml" filepath="$PROJECT_DIR$/servlet/servlet.iml" />

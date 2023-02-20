@@ -14,6 +14,7 @@
         <option value="$PROJECT_DIR$/fruitManagerMVC-dispatcherServlet/pom.xml" />
         <option value="$PROJECT_DIR$/fruitManagerMVC-reflect/pom.xml" />
         <option value="$PROJECT_DIR$/fruitManagerMVC-controller/pom.xml" />
+        <option value="$PROJECT_DIR$/fruitManagerMVC-ioc/pom.xml" />
       </list>
     </option>
     <option name="ignoredFiles">
