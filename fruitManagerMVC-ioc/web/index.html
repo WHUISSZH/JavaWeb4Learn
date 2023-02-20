@@ -1,0 +1,82 @@
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="css/index.css">
+    <script>
+        function page(pageNo, pageCapcity) {
+            window.location.href = "fruit.do?operate=index&pageNo=" + pageNo + "&pageCapcity=" + pageCapcity;
+        }
+    </script>
+</head>
+<body>
+<div id="div_container">
+    <div id="div_fruit_list">
+        <p class="center f30">水果库存后台管理系统</p>
+        <div style="border:0px solid red;width:60%;margin-left:5%;text-align:right;">
+            <form th:action="@{/fruit.do(operate='index')}" method="post" style="float:left;width:60%;margin-left:20%;">
+                <input type="hidden" name="oper" value="search"/>
+                请输入关键字：<input type="text" name="keyword" th:value="${session.keyword}"/>
+                <input type="submit" value="查询" class="btn"/>
+            </form>
+        </div>
+        <table id="tbl_fruit">
+            <tr>
+                <th class="w20">名称</th>
+                <th class="w20">单价</th>
+                <th class="w20">库存</th>
+                <th class="w20">备注</th>
+                <th>操作</th>
+            </tr>
+            <tr th:if="${#lists.isEmpty(session.fruitList)}">
+                <td colspan="4">对不起，库存为空！</td>
+            </tr>
+            <tr th:unless="${#lists.isEmpty(session.fruitList)}" th:each="fruit : ${session.fruitList}">
+                <!--超链接的表示-->
+                <!--固定不变的就是直接写字符串，变化的地方一般都是要通过${}取值-->
+                <!-- <td><a th:text="${fruit.fname}" th:href="@{'/edit.do?fid='+${fruit.fid}}">苹果</a></td> -->
+                <td><a th:text="${fruit.fname}" th:href="@{/fruit.do(fid=${fruit.fid},operate='directEditPage')}">苹果</a>
+                </td>
+                <td th:text="${fruit.price}">5</td>
+                <td th:text="${fruit.count}">20</td>
+                <td th:text="${fruit.remark}">20</td>
+                <td><a th:href="@{fruit.do(fid=${fruit.fid},operate='del')}">X</a></td>
+            </tr>
+        </table>
+        <div style="border:0px solid red;width:60%;margin-left:20%;margin-top:4px; text-align:right;">
+            <a th:href="@{/fruit.do(operate='directAddPage')}"
+               style="border:0px solid blue;margin-bottom:4px;">添加新库存记录</a>
+        </div>
+
+        <div style="width:60%;margin-left:40%;border:0px solid red;padding-top:4px;" class="center">
+            <div th:text="${session.pageNo} + '/' + ${session.pageCount} " style="margin-right: 5px">1</div>
+            <div>
+                <form th:action="@{/fruit.do(operate='index')}" method="post">
+                    每页展示记录条数：<input type="text" name="pageCapcity" th:value="${session.pageCapcity}"/>
+                    <input type="submit" value="确认">
+                </form>
+            </div>
+        </div>
+
+        <div style="width:60%;margin-left:20%;border:0px solid red;padding-top:4px;" class="center">
+            <!--通过get方式的queryString传递参数给servlet-->
+            <!--传递pageNo的同时也必须传递pageCapcity，不然在-->
+            <!--public List<Fruit> getFruitListByPageNo(String keyword, int pageNo, int pageCapcity) {-->
+            <!--return super.executeQuery("select * from t_fruit where fname like ? or remark like ? limit ? , ?", "%" + keyword + "%", "%" + keyword + "%", (pageNo - 1) * pageCapcity, pageCapcity);-->
+            <!--}-->
+            <!--中查询数据的limite范围会超出总记录条数-->
+            <input type="button" value="首  页" class="btn" th:onclick="|page(1,${session.pageCapcity})|"
+                   th:disabled="${session.pageNo == 1}">
+            <input type="button" value="上一页" class="btn"
+                   th:onclick="|page(${session.pageNo - 1},${session.pageCapcity})|"
+                   th:disabled="${session.pageNo == 1}">
+            <input type="button" value="下一页" class="btn"
+                   th:onclick="|page(${session.pageNo + 1},${session.pageCapcity})|"
+                   th:disabled="${session.pageNo == session.pageCount}">
+            <input type="button" value="尾  页" class="btn"
+                   th:onclick="|page(${session.pageCount},${session.pageCapcity})|"
+                   th:disabled="${session.pageNo == session.pageCount}">
+        </div>
+    </div>
+</div>
+</body>
+</html>
