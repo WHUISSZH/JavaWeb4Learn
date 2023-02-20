@@ -9,6 +9,9 @@
         <module name="fruitManager1.0" />
         <module name="fruitManager2.0" />
         <module name="fruitManager3.0" />
+        <module name="fruitManagerMVC" />
+        <module name="fruitManagerMVC-controller" />
+        <module name="fruitManagerMVC-reflect" />
         <module name="servlet" />
         <module name="thymeleafLearn" />
         <module name="thymeleafLearn2.0" />
@@ -18,6 +21,9 @@
       <module name="fruitManager1.0" target="11" />
       <module name="fruitManager2.0" target="11" />
       <module name="fruitManager3.0" target="11" />
+      <module name="fruitManagerMVC" target="11" />
+      <module name="fruitManagerMVC-controller" target="11" />
+      <module name="fruitManagerMVC-reflect" target="11" />
       <module name="jdbcLearn" target="11" />
       <module name="servlet" target="11" />
       <module name="thymeleafLearn" target="11" />
@@ -25,11 +31,14 @@
     </bytecodeTargetLevel>
   </component>
   <component name="JavacSettings">
-    <option name="ADDITIONAL_OPTIONS_STRING" value="-encoding utf-8" />
+    <option name="ADDITIONAL_OPTIONS_STRING" value="-parameters" />
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
       <module name="fruitManager1.0" options="" />
       <module name="fruitManager2.0" options="" />
       <module name="fruitManager3.0" options="" />
+      <module name="fruitManagerMVC" options="" />
+      <module name="fruitManagerMVC-controller" options="" />
+      <module name="fruitManagerMVC-reflect" options="" />
       <module name="jdbcLearn" options="" />
       <module name="servlet" options="" />
       <module name="thymeleafLearn" options="" />
