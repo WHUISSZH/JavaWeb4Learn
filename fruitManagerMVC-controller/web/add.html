@@ -1,0 +1,40 @@
+<html xmlns:th="http://www.thymeleaf.org" xmlns="http://www.w3.org/1999/html">
+<head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="css/add.css">
+</head>
+<body>
+<div id="div_container">
+    <div id="div_fruit_list">
+        <p class="center f30">添加库存信息</p>
+        <!--action对应的是 url地址中/ 后面的部分-->
+        <!--th:action 换成html默认参数 action 也可以-->
+        <form th:action="@{/fruit.do(operate='add')}" method="post">
+            <table id="tbl_fruit">
+                <tr>
+                    <th class="w20">名称</th>
+                    <td><input type="text" name="fname"/></td>
+                </tr>
+                <tr>
+                    <th class="w20">单价</th>
+                    <td><input type="text" name="price"/></td>
+                </tr>
+                <tr>
+                    <th class="w20">库存</th>
+                    <td><input type="text" name="count"></td>
+                </tr>
+                <tr>
+                    <th class="w20">备注</th>
+                    <td><input type="text" name="remark"></td>
+                </tr>
+                <tr>
+                    <th colspan="2">
+                        <input type="submit" value="提交">
+                    </th>
+                </tr>
+            </table>
+        </form>
+    </div>
+</div>
+</body>
+</html>
