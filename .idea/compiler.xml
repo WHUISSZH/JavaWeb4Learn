@@ -6,6 +6,7 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
+        <module name="filter-listener" />
         <module name="fruitManager1.0" />
         <module name="fruitManager2.0" />
         <module name="fruitManager3.0" />
@@ -13,12 +14,14 @@
         <module name="fruitManagerMVC-controller" />
         <module name="fruitManagerMVC-ioc" />
         <module name="fruitManagerMVC-reflect" />
+        <module name="fruitManagerMVC-transaction" />
         <module name="servlet" />
         <module name="thymeleafLearn" />
         <module name="thymeleafLearn2.0" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
+      <module name="filter-listener" target="6" />
       <module name="fruitManager1.0" target="11" />
       <module name="fruitManager2.0" target="11" />
       <module name="fruitManager3.0" target="11" />
@@ -26,6 +29,7 @@
       <module name="fruitManagerMVC-controller" target="11" />
       <module name="fruitManagerMVC-ioc" target="11" />
       <module name="fruitManagerMVC-reflect" target="11" />
+      <module name="fruitManagerMVC-transaction" target="11" />
       <module name="jdbcLearn" target="11" />
       <module name="servlet" target="11" />
       <module name="thymeleafLearn" target="11" />
@@ -35,6 +39,7 @@
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_STRING" value="-parameters" />
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="filter-listener" options="" />
       <module name="fruitManager1.0" options="" />
       <module name="fruitManager2.0" options="" />
       <module name="fruitManager3.0" options="" />
@@ -42,6 +47,7 @@
       <module name="fruitManagerMVC-controller" options="" />
       <module name="fruitManagerMVC-ioc" options="" />
       <module name="fruitManagerMVC-reflect" options="" />
+      <module name="fruitManagerMVC-transaction" options="" />
       <module name="jdbcLearn" options="" />
       <module name="servlet" options="" />
       <module name="thymeleafLearn" options="" />
